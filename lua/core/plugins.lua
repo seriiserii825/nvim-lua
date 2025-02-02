@@ -7,7 +7,6 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({
 	{
   'nvim-telescope/telescope.nvim',
@@ -24,7 +23,7 @@ require("lazy").setup({
     -- refer to the configuration section below
   },
   keys = {
-    {
+   {
       "<leader>?",
       function()
         require("which-key").show({ global = false })
@@ -33,5 +32,8 @@ require("lazy").setup({
     },
   },
 },
-{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'}
+{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+{"CopilotC-Nvim/CopilotChat.nvim"},
+      { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
 });
