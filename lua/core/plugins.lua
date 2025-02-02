@@ -18,8 +18,8 @@ require("lazy").setup({
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
-		version = "*", -- you can specify a version if needed
-		lazy = false, -- we want it loaded immediately
+		version = "*",                -- you can specify a version if needed
+		lazy = false,                 -- we want it loaded immediately
 		dependencies = {
 			"nvim-tree/nvim-web-devicons", -- required for file icons
 		},
@@ -47,14 +47,14 @@ require("lazy").setup({
 			},
 		},
 	},
-	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{ "akinsho/bufferline.nvim",    version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		dependencies = {
-			{ "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+			{ "github/copilot.vim" },                    -- or zbirenbaum/copilot.lua
 			{ "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
 		},
-		build = "make tiktoken", -- Only on MacOS or Linux
+		build = "make tiktoken",                       -- Only on MacOS or Linux
 		opts = {
 			-- See Configuration section for options
 		},
@@ -83,14 +83,14 @@ require("lazy").setup({
 		event = "VeryLazy",
 		---@type Flash.Config
 		opts = {},
-  -- stylua: ignore
-  keys = {
-    { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-    -- { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-    -- { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-    -- { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-    -- { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-  },
+		-- stylua: ignore
+		keys = {
+			{ "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+			-- { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+			-- { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+			-- { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+			-- { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+		},
 	},
 	{ "tpope/vim-fugitive" },
 	{ "airblade/vim-gitgutter" },
@@ -104,7 +104,7 @@ require("lazy").setup({
 	{ "hrsh7th/nvim-cmp" },
 	{ "lewis6991/gitsigns.nvim" },
 	{ "neovim/nvim-lspconfig" },
-	{ "williamboman/mason.nvim" },
+	{ "williamboman/mason.nvim",  "williamboman/mason-lspconfig.nvim" },
 	{ "nvimtools/none-ls.nvim" },
 	{
 		"folke/noice.nvim",
