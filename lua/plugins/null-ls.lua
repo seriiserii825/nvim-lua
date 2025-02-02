@@ -8,4 +8,4 @@ null_ls.setup({
 })
 
 -- Set keybinding to format
-vim.api.nvim_set_keymap('n', '<leader>fm', ':lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<M-l>', ':lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true, silent = true })
