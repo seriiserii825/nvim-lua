@@ -14,13 +14,7 @@ require("lazy").setup({
   dependencies = { 'nvim-lua/plenary.nvim' },
   version = false -- This installs the latest stable version
 },
-    {
-        'nvim-tree/nvim-tree.lua',
-        lazy = true,
-        dependencies = {
-            'nvim-tree/nvim-web-devicons',
-        },
-    },
+{"nvim-tree/nvim-tree.lua"},
     {
   "folke/which-key.nvim",
   event = "VeryLazy",
@@ -38,5 +32,6 @@ require("lazy").setup({
       desc = "Buffer Local Keymaps (which-key)",
     },
   },
-}
+},
+{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'}
 });

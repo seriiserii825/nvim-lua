@@ -1,7 +1,10 @@
 -- Basic config
 vim.g.mapleader = ' '
-require("core.plugins")
 
+
+require("core.settings")
+require("core.plugins")
 require("plugins.telescope")
--- require("plugins.which-key")
--- require("plugins.nvim-tree")
+require("plugins.nvim-tree")
+require("plugins.which-key")
+require("plugins.bufferline")
