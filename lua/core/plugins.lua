@@ -73,4 +73,7 @@ require("lazy").setup({
   -- {'akinsho/toggleterm.nvim', version = "*", opts = {direction =  'float',}}
   {'voldikss/vim-floaterm'},
   {'tpope/vim-surround'},
+  {'jiangmiao/auto-pairs'},
+  {'tomtom/tcomment_vim'},
+  {'mg979/vim-visual-multi'}
 });
