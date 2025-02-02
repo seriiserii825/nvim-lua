@@ -57,3 +57,10 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.cmd("filetype plugin indent on") -- Enable filetype-based indentation
 
+
+vim.api.nvim_create_autocmd("ModeChanged", {
+  pattern = "*:v",
+  callback = function()
+    vim.cmd("highlight Visual guibg=green")
+  end
+})
