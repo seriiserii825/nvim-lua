@@ -1,7 +1,6 @@
 -- Basic config
 vim.g.mapleader = ' '
 
-
 require("core.settings")
 require("core.mappings")
 require("core.plugins")
@@ -10,4 +9,5 @@ require("plugins.telescope")
 require("plugins.bufferline")
 require("plugins.floaterm")
 -- require("plugins.copilot-chat")
+require("plugins.copilot")
 require("plugins.which-key")
