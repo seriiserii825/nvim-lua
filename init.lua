@@ -1,3 +1,4 @@
+_G.vim = vim
 -- Basic config
 vim.g.mapleader = ' '
 
