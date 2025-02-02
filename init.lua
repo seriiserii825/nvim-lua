@@ -3,6 +3,7 @@ vim.g.mapleader = ' '
 
 
 require("core.settings")
+require("core.mappings")
 require("core.plugins")
 require("plugins.telescope")
 -- require("plugins.nvim-tree")
