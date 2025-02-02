@@ -89,5 +89,10 @@ require("lazy").setup({
     -- { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
     -- { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
   },
+  {'tpope/vim-fugitive'},
+  {'airblade/vim-gitgutter'},
+  {'NvChad/nvim-colorizer.lua'},
+  {'SirVer/ultisnips'},
+  {'honza/vim-snippets'},
 }
 });
