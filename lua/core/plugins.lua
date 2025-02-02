@@ -64,5 +64,6 @@ require("lazy").setup({
     config = function()
         require('nordic').load()
     end
-}
+},
+{'sheerun/vim-polyglot'}
 });
