@@ -7,6 +7,12 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "plugins.lua",
+  command = "Lazy sync",
+  group = vim.api.nvim_create_augroup("LazySync", { clear = true }),
+})
 require("lazy").setup({
 	{
   'nvim-telescope/telescope.nvim',
@@ -65,5 +71,10 @@ require("lazy").setup({
         require('nordic').load()
     end
 },
-{'sheerun/vim-polyglot'}
+{'sheerun/vim-polyglot'},
+{'vim-airline/vim-airline'},
+{'preservim/vim-indent-guides'},
+  -- amongst your other plugins
+  -- {'akinsho/toggleterm.nvim', version = "*", opts = {direction =  'float',}}
+  {'voldikss/vim-floaterm'}
 });
