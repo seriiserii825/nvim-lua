@@ -101,5 +101,6 @@ require("lazy").setup({
     {'hrsh7th/nvim-cmp'},
     {'lewis6991/gitsigns.nvim'},
   {'neovim/nvim-lspconfig'},
-  { "williamboman/mason.nvim"}
+  { "williamboman/mason.nvim"},
+  {"nvimtools/none-ls.nvim"}
 });

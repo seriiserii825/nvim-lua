@@ -7,7 +7,6 @@ vim.api.nvim_set_keymap('i', '<C-i>', '<C-r>=@i<CR>', { noremap = true, silent =
 vim.api.nvim_set_keymap('n', '<leader>x', ':g/^\\s*$/d<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>z', ':%s/\\s\\{2,}/ /g<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ob', ':w <Bar> !xdg-open %<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>sn', ':source ~/.config/nvim/init.vim<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>sf', ':source %<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-t>', ':let @+ = len(@+)<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ms', ':%s/`\\(.*\\)`/```\r\\1\r```/g<CR>', { noremap = true, silent = true })
@@ -31,4 +30,6 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 
+-- Set keybinding to reload init.lua
+vim.api.nvim_set_keymap('n', '<leader>sn', ':luafile ~/.config/nvim/init.lua<CR>', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('n', '<C-b>', ':ToggleTerm<CR>', { noremap = true, silent = true })
