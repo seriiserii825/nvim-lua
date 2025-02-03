@@ -57,4 +57,11 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.cmd("filetype plugin indent on") -- Enable filetype-based indentation
 
+-- Disable lazyredraw when in insert mode
 vim.opt.lazyredraw = false
+
+-- Save on focus lost
+vim.api.nvim_create_autocmd("FocusLost", {
+  pattern = "*",
+  command = "silent! wa"
+})
