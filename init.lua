@@ -1,6 +1,7 @@
 _G.vim = vim
 -- Basic config
 vim.g.mapleader = ' '
+vim.g.UltiSnipsSnippetDirectories = { '~/.config/nvim/UltiSnips' }
 
 require("core.settings")
 require("core.mappings")
