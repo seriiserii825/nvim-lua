@@ -11,11 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-	{
-		"nvim-telescope/telescope.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		version = false, -- This installs the latest stable version
-	},
+	require('plugins.telescope'),
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*", -- you can specify a version if needed

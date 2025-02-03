@@ -13,6 +13,7 @@ vim.api.nvim_set_keymap('n', '<leader>ms', ':%s/`\\(.*\\)`/```\r\\1\r```/g<CR>',
 vim.api.nvim_set_keymap('v', '<leader>rn', '"zy:s/<C-r>z/', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<leader>rna', '"zy:%s/<C-r>z/', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>vs', 'yi" :let @i=@0<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>vf', '', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>yr', ':let @+=expand("%")<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ya', ':let @+=expand("%:p")<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>yn', ':let @+=expand("%:t")<CR>', { noremap = true, silent = true })

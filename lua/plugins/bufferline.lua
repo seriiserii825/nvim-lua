@@ -51,3 +51,13 @@ end
 
 -- Mapping for 0
 vim.api.nvim_set_keymap('n', '<leader>0', ':BufferLineGoToBuffer 0<CR>', { noremap = true, silent = true })
+
+local function custom_mapping()
+  vim.cmd('vs')
+  vim.cmd('wincmd h')
+  vim.fn.timer_start(100, function()
+    vim.cmd('BufferLineCyclePrev')
+  end)
+end
+
+vim.api.nvim_set_keymap('n', '<leader>fv', ':lua custom_mapping()<CR>', { noremap = true, silent = true })
