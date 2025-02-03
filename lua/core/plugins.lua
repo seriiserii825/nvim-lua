@@ -98,7 +98,35 @@ require("lazy").setup({
 	{ "tpope/vim-fugitive" },
 	{ "airblade/vim-gitgutter" },
 	{ "NvChad/nvim-colorizer.lua" },
-	{ "SirVer/ultisnips" },
+	{
+		"SirVer/ultisnips",
+		lazy = false, -- Load immediately
+		config = function()
+			vim.g.UltiSnipsExpandTrigger = "<Tab>"
+			vim.g.UltiSnipsJumpForwardTrigger = "<Tab>"
+			vim.g.UltiSnipsJumpBackwardTrigger = "<S-Tab>"
+			vim.g.UltiSnipsSnippetDirectories = { "UltiSnips" }
+		end,
+	},
+	{
+		"quangnguyen30192/cmp-nvim-ultisnips",
+		dependencies = { "hrsh7th/nvim-cmp" },
+		config = function()
+			require("cmp").setup({
+				snippet = {
+					expand = function(args)
+						vim.fn["UltiSnips#Anon"](args.body)
+					end,
+				},
+				sources = {
+					{ name = "ultisnips" }, -- Ensure this is included
+					{ name = "nvim_lsp" },
+					{ name = "buffer" },
+					{ name = "path" },
+				},
+			})
+		end,
+	},
 	{ "honza/vim-snippets" },
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-buffer" },
