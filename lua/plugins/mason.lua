@@ -9,6 +9,7 @@ require("mason").setup({
 })
 require("mason-lspconfig").setup({
 	ensure_installed = {
+		"emmet_ls",
 		"intelephense",
 		"stylelua",
 		"lua-language-server",

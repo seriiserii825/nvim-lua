@@ -124,5 +124,5 @@ require("lazy").setup({
 			"rcarriga/nvim-notify",
 		},
 	},
-	{'mattn/emmet-vim'}
+	-- {'mattn/emmet-vim'}
 })
