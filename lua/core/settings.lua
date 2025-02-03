@@ -56,3 +56,5 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 vim.opt.clipboard = "unnamedplus"
 
 vim.cmd("filetype plugin indent on") -- Enable filetype-based indentation
+
+vim.opt.lazyredraw = false

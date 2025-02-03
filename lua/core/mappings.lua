@@ -12,7 +12,7 @@ vim.api.nvim_set_keymap('n', '<C-t>', ':let @+ = len(@+)<CR>', { noremap = true,
 vim.api.nvim_set_keymap('n', '<leader>ms', ':%s/`\\(.*\\)`/```\r\\1\r```/g<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<leader>rn', '"zy:s/<C-r>z/', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<leader>rna', '"zy:%s/<C-r>z/', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>vs', '"iyi"', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>vs', 'yi" :let @i=@0<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>yr', ':let @+=expand("%")<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ya', ':let @+=expand("%:p")<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>yn', ':let @+=expand("%:t")<CR>', { noremap = true, silent = true })
@@ -31,5 +31,3 @@ vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 
 -- Set keybinding to reload init.lua
-vim.api.nvim_set_keymap('n', '<leader>sn', ':luafile ~/.config/nvim/init.lua<CR>', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('n', '<C-b>', ':ToggleTerm<CR>', { noremap = true, silent = true })
