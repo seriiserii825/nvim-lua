@@ -23,7 +23,7 @@ lspconfig.intelephense.setup({
 			environment = {
 				includePaths = {
 					"/home/serii/Documents/wordpress/wordpress",
-					"/home/serii/Documents/wordpress/advanced-custom-fields-pro",
+					"/home/serii/Documents/wordpress/advanced-custom-fields",
 					"/home/serii/Documents/wordpress/woocommerce",
 				},
 			},

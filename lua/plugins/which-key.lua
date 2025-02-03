@@ -1,7 +1,7 @@
 local wk = require("which-key")
 wk.add({
   { "<leader>f", group = "file" }, -- group
-  { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree" }, -- NvimTree mapping
+  -- { "<leader>e", "<cmd>NvimTreeFindFile<cr>", desc = "Toggle NvimTree" }, -- NvimTree mapping
   { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find File", mode = "n" },
   { "<leader>fb", function() print("hello") end, desc = "Foobar" },
   { "<leader>fn", desc = "New File" },
