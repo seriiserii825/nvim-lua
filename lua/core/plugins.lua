@@ -18,8 +18,8 @@ require("lazy").setup({
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
-		version = "*",                -- you can specify a version if needed
-		lazy = false,                 -- we want it loaded immediately
+		version = "*", -- you can specify a version if needed
+		lazy = false, -- we want it loaded immediately
 		dependencies = {
 			"nvim-tree/nvim-web-devicons", -- required for file icons
 		},
@@ -47,25 +47,28 @@ require("lazy").setup({
 			},
 		},
 	},
-	{ "akinsho/bufferline.nvim",    version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		dependencies = {
-			{ "github/copilot.vim" },                    -- or zbirenbaum/copilot.lua
+			{ "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
 			{ "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
 		},
-		build = "make tiktoken",                       -- Only on MacOS or Linux
+		build = "make tiktoken", -- Only on MacOS or Linux
 		opts = {
 			-- See Configuration section for options
 		},
 		-- See Commands section for default commands if you want to lazy load on them
 	},
+	-- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{
 		"AlexvZyl/nordic.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
 			require("nordic").load()
+
+			vim.cmd("highlight Visual guibg=#4C566A")
 		end,
 	},
 	{ "sheerun/vim-polyglot" },
@@ -104,7 +107,7 @@ require("lazy").setup({
 	{ "hrsh7th/nvim-cmp" },
 	{ "lewis6991/gitsigns.nvim" },
 	{ "neovim/nvim-lspconfig" },
-	{ "williamboman/mason.nvim",  "williamboman/mason-lspconfig.nvim" },
+	{ "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
 	{ "nvimtools/none-ls.nvim" },
 	{
 		"folke/noice.nvim",
