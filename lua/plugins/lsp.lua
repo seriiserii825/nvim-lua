@@ -34,6 +34,12 @@ lspconfig.intelephense.setup({
 -- lspconfig.prismals.setup {}
 lspconfig.cssls.setup({
 	capabilities = capabilities,
+	filetypes = { "css", "scss", "less" },
+	settings = {
+		css = { validate = true },
+		scss = { validate = true },
+		less = { validate = true },
+	},
 })
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
